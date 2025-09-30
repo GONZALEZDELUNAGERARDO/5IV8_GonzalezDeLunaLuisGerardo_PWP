@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(../image/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    min-height: 100vh;
+    backdrop-filter: blur(3px); 
+}
+
+
+.userlogin {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
+
+
+.userid, .password {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.userid h2,
+.password h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.userid input,
+.password input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #6a1b9a;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.userid input:focus,
+.password input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+
+.button {
+    margin-top: 30px;
+}
+
+.button button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #4a148c;
+}
+
+.button p {
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+
+a {
+    margin-top: 20px;
+    display: inline-block;
+    color: #6a1b9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.button img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+body{
+    background-image: url(./fondo.jpg);
+}
