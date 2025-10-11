@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="/05 Ejercicios/CSS/style1.css">
+    <script src="./js/funcionesE1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form method="post" name="formulario" action=" ">
+            <label for="">
+                Formulario para cálculo de inversiones Banco Kawaii con un incremento del 2% mensual
+                <br>
+                <div class="container-table">
+                    <table class="table">
+                        <tr>
+                            <td>Introduce la cantidad que deseas invertir:</td>
+                            <td>
+                                <input type="text" name="cantidad" id="cantidadi" onkeypress="return validarn(event)">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Introduce el número de meses (máximo 18):</td>
+                            <td>
+                                <input type="number" name="meses" id="mesesi" min="1" max="18">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Calcular Interés" name="enviar" onclick="interes()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Su saldo total con el interés es de:</td>
+                            <td>
+                                <input type="text" name="sueldoi" id="saldoi" readonly="readonly" class="input_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Borrar Datos" name="borrar" onclick="borrari()">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </label>
+        </form>      
+    </div>
+
+    <script>
+        function validarn(e) {
+            var teclado = (document.all) ? e.keyCode : e.which;
+            if (teclado == 8) return true;
+            var patron = /[0-9.]/;
+            var codigo = String.fromCharCode(teclado);
+            return patron.test(codigo);
+        }
+
+        function interes() {
+            var valor = document.getElementById("cantidadi").value;
+            var meses = parseInt(document.getElementById("mesesi").value);
+            var parseo = parseFloat(valor);
+
+            if (isNaN(parseo) || parseo <= 0) {
+                alert("Por favor ingresa una cantidad válida.");
+                return;
+            }
+
+            if (isNaN(meses) || meses < 1 || meses > 18) {
+                alert("Por favor ingresa un número de meses entre 1 y 18.");
+                return;
+            }
+
+            var tasaMensual = 0.02;
+            var interes = parseo * tasaMensual * meses;
+            var total = parseo + interes;
+
+            document.getElementById("saldoi").value = "$ " + total.toFixed(2);
+        }
+
+        function borrari() {
+            document.getElementById("saldoi").value = "";
+            document.getElementById("cantidadi").value = "";
+            document.getElementById("mesesi").value = "";
+        }
+    </script>
+</body>
+</html>
