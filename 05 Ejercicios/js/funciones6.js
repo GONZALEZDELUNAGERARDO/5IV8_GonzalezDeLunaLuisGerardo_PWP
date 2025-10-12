@@ -7,7 +7,7 @@ function validarn(e) {
 }
 
 function calcularEdad() {
-  let anioNacimiento = parseInt(document.getElementById("añoNacimiento").value);
+  let anioNacimiento = parseInt(document.getElementById("anioNacimiento").value);
   let anioActual = new Date().getFullYear();
 
   if (isNaN(anioNacimiento) || anioNacimiento <= 1900 || anioNacimiento > anioActual) {
@@ -20,6 +20,6 @@ function calcularEdad() {
 }
 
 function borrarDatos() {
-  document.getElementById("añoNacimiento").value = "";
+  document.getElementById("anioNacimiento").value = "";
   document.getElementById("edad").value = "";
 }
