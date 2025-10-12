@@ -11,13 +11,13 @@
   --font-italic: 'Roboto Condensed', sans-serif;
   --font-body: 'Roboto', sans-serif;
 
-  --color-bg: #2E2E2E;
-  --color-panel: #2E0F0F;
-  --color-accent: #572222;
-  --color-text: #cecece;
-  --color-input-bg: #063E66;
-  --color-highlight: #66AEE0;
-  --color-link: #8BC3E8;
+  --color-bg: #ffffff;
+  --color-panel: #f5f5f5;
+  --color-accent: #6a0dad;
+  --color-text: #333333;
+  --color-input-bg: #e0e0e0;
+  --color-highlight: #a020f0;
+  --color-link: #8a2be2;
 }
 
 body {
@@ -29,6 +29,7 @@ body {
   text-align: center;
   font-family: var(--font-body);
   padding: 20px;
+  color: var(--color-text);
 }
 
 .container {
@@ -38,7 +39,7 @@ body {
   border-radius: 10px;
   width: 90%;
   max-width: 600px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -72,7 +73,7 @@ input[type="text"] {
 
 input[type="button"] {
   background-color: var(--color-highlight);
-  color: var(--color-accent);
+  color: #ffffff;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -83,8 +84,8 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-  background-color: #ffffff;
-  color: var(--color-accent);
+  background-color: #6a0dad;
+  color: #ffffff;
 }
 
 .input_text {
@@ -96,6 +97,6 @@ input[type="button"]:hover {
   font-family: var(--font-body);
 }
 
-a{
-  color: #66AEE0;
+a {
+  color: var(--color-link);
 }

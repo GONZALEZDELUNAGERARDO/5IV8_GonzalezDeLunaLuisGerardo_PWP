@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-title: 'Oswald', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --color-bg: #ffffff; 
+  --color-panel: #f5f5f5; 
+  --color-accent: #4B0082;
+  --color-text: #333333;
+  --color-highlight: #6A0DAD; 
+  --gradient-start: #6A0DAD;
+  --gradient-end: #A020F0;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: var(--color-panel);
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.menu-section h2 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--color-highlight);
+  margin-bottom: 15px;
+}
+
+.practice-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px; 
+}
+
+.practice-item {
+  background-color: #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.practice-item a {
+  color: var(--color-highlight);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.practice-item a:hover {
+  color: var(--color-accent);
+}
+
+.btn {
+  background-color: var(--color-highlight);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
