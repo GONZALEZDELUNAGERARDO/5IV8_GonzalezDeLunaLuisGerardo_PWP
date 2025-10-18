@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú de Actividades</title>
-  <link rel="stylesheet" href="./style1.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicios de Cadenas y Vectores</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script src="./js/algoritmia.js"></script>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Menú de Ejercicios</h1>
-      <p>Selecciona una actividad </p>
-    </header>
+    <h1>Ejercicios de Cadenas y Vectores</h1>
 
-    <table class="menu-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Regresar a git page</th>
-          <th><a href="../index.html" class="btn">Regresar</a></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Problema 1</td>
-          <td><a href="/06 Algoritmia/algoritmia.html" class="btn">Ver</a></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Problema 2</td>
-          <td><a href="/06 Algoritmia/problema 2.html" class="btn">Ver</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Problema 3</td>
-          <td><a href="/06 Algoritmia/problema 3.html" class="btn">Ver</a></td>
-        </tr>
+   
+    <section>
+      <h2>1 Invertir orden de palabras</h2>
+      <label>Escribe palabras separadas por espacios:</label>
+      <input type="text" id="palabrasEspacio" />
+      <button onclick="invertirPalabras()">Invertir</button>
+      <p>Resultado: <span id="resultado1"></span></p>
+    </section>
+
     
-          
-      </tbody>
-    </table>
+    <section>
+      <h2>2 Mínimo producto escalar entre dos vectores</h2>
+      <label>Vector 1 (separado por comas):</label>
+      <input type="text" id="vector1" />
+      <label>Vector 2 (separado por comas):</label>
+      <input type="text" id="vector2" />
+      <button onclick="minProductoEscalar()">Calcular</button>
+      <p>Resultado: <span id="resultado2"></span></p>
+    </section>
+
+    
+    <section>
+      <h2>3 Palabra con más caracteres únicos</h2>
+      <label>Lista de palabras (separadas por comas, sin espacios):</label>
+      <input type="text" id="listaPalabras" />
+      <button onclick="palabraMasUnicos()">Buscar</button>
+      <p>Resultado: <span id="resultado3"></span></p>
+    </section>
+
+    <div style="margin-top: 20px;">
+      <a href="../index.html" class="button">Regresar al menú principal</a>
+    </div>
   </div>
 </body>
 </html>

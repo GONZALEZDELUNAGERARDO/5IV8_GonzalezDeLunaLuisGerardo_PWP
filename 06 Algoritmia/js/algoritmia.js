@@ -1,42 +1,48 @@
-function problema1(){
-    
+
+function invertirPalabras() {
+  const entrada = document.getElementById("palabrasEspacio").value.trim();
+  const palabras = entrada.split(" ");
+  const invertido = palabras.reverse().join(" ");
+  document.getElementById("resultado1").textContent = invertido;
 }
 
-function problema2(){
-    //Este es mío
-    //Primero necesitamos estos valores 
-    var p2_x1 = document.querySelector ("#p2_x1").value;
-    var p2_x2 = document.querySelector ("#p2_x1").value;
-    var p2_x3 = document.querySelector ("#p2_x1").value;
-    var p2_x4 = document.querySelector ("#p2_x1").value;
-    var p2_x5 = document.querySelector ("#p2_x1").value;
 
-    var p2_y1 = document.querySelector ("#p2_x1").value;
-    var p2_y2 = document.querySelector ("#p2_x1").value;
-    var p2_y3 = document.querySelector ("#p2_x1").value;
-    var p2_y4 = document.querySelector ("#p2_x1").value;
-    var p2_y5 = document.querySelector ("#p2_x1").value;
+function minProductoEscalar() {
+  const v1 = document.getElementById("vector1").value.split(",").map(Number);
+  const v2 = document.getElementById("vector2").value.split(",").map(Number);
 
-    //creamos los vectores
-    var v1 = [p2_x1, p2_x2, p2_x3,p2_x4, p2_x5];
-    var v2 = [p2_y1, p2_y2, p2_y3,p2_y4, p2_y5];
+  if (v1.length !== v2.length || v1.some(isNaN) || v2.some(isNaN)) {
+    alert("Ambos vectores deben tener el mismo número de elementos y ser numéricos.");
+    return;
+  }
 
-    //creamos el vector resultado
-    v1 = v1.sort (function (a,b) {return b-a});
-    v2 = v2.sort (function (a,b) {return b-a});
+  const v1Ordenado = v1.sort((a, b) => a - b);
+  const v2Ordenado = v2.sort((a, b) => b - a);
 
-    v2 = v2.reverse();
+  let producto = 0;
+  for (let i = 0; i < v1Ordenado.length; i++) {
+    producto += v1Ordenado[i] * v2Ordenado[i];
+  }
 
-    var p2_producto = 0;
-    for(var i=0; i< v1.length; i++){
-        p2_producto += v1[i] * v2[i];
+  document.getElementById("resultado2").textContent = producto;
+}
+
+
+function palabraMasUnicos() {
+  const entrada = document.getElementById("listaPalabras").value.trim();
+  const palabras = entrada.split(",");
+
+  let maxUnicos = 0;
+  let palabraMax = "";
+
+  for (const palabra of palabras) {
+    const letras = new Set(palabra.toUpperCase().replace(/[^A-Z]/g, ""));
+    if (letras.size > maxUnicos) {
+      maxUnicos = letras.size;
+      palabraMax = palabra;
     }
-    document.querySelector("#p2_resultado").textContent = "El producto escalar minimo es:" + p2_producto;
+  }
 
-
-}
-
-function problema3(){
-    //tarea
+  document.getElementById("resultado3").textContent = `${palabraMax} (${maxUnicos} caracteres únicos)`;
 }
 
