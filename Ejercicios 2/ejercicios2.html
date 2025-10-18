@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicios Lógicos</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="funciones.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicios de Lógica y Cálculo</h1>
+
+  
+    <section>
+      <h2>1 Operación según relación entre dos números</h2>
+      <label>Número 1:</label>
+      <input type="number" id="num1" />
+      <label>Número 2:</label>
+      <input type="number" id="num2" />
+      <button onclick="compararNumeros()">Calcular</button>
+      <p>Resultado: <span id="resultado1"></span></p>
+    </section>
+
+
+    <section>
+      <h2>2 Mayor de tres números</h2>
+      <label>Número A:</label>
+      <input type="number" id="a" />
+      <label>Número B:</label>
+      <input type="number" id="b" />
+      <label>Número C:</label>
+      <input type="number" id="c" />
+      <button onclick="mayorDeTres()">Mostrar mayor</button>
+      <p>Mayor: <span id="resultado2"></span></p>
+    </section>
+
+  
+    <section>
+      <h2>3 Pago por horas extra</h2>
+      <label>Horas trabajadas:</label>
+      <input type="number" id="horas" />
+      <label>Pago por hora normal:</label>
+      <input type="number" id="pagoHora" />
+      <button onclick="calcularPagoExtra()">Calcular pago</button>
+      <p>Total a pagar: <span id="resultado3"></span></p>
+    </section>
+
+  
+    <section>
+      <h2>4 Cálculo de utilidad anual</h2>
+      <label>Salario mensual:</label>
+      <input type="number" id="salario" />
+      <label>Años de antigüedad:</label>
+      <input type="number" id="antiguedad" />
+      <button onclick="calcularUtilidad()">Calcular utilidad</button>
+      <p>Utilidad anual: <span id="resultado4"></span></p>
+    </section>
+
+    <div style="margin-top: 20px;">
+       
+      <a href="../index.html" class="button">Regresar al menú principal</a>
+    </div>
+  </div>
+</body>
+</html>
