@@ -26,8 +26,14 @@
                 <h2>Último movimiento</h2>
                 <div id="flecha" class="texto-centrado"></div>
             </div>
+
+           
+            <div id="boton-revolver" class="texto-centrado">
+                <button id="btnRevolver">Revolver piezas</button>
+            </div>
         </div>
     </div>
+
     <div class="col-60">
         <div id="juego">
             <div id="pieza1" class="piezas">
@@ -55,11 +61,21 @@
                 <img src="./images/80.jpg" alt="No se encuentra el recurso">
             </div>
             <div id="pieza9" class="piezas">
-
             </div>
         </div>
     </div>
+
     <script src="./juego.js copy/juego.js"></script>
+
+   
+    <script>
+        document.getElementById("btnRevolver").addEventListener("click", function () {
+            const contenedor = document.getElementById("juego");
+            const piezas = Array.from(contenedor.querySelectorAll(".piezas"));
+            const piezasMezcladas = piezas.sort(() => Math.random() - 0.5);
+            piezasMezcladas.forEach(pieza => contenedor.appendChild(pieza));
+        });
+    </script>
 
     <div class="container-footer">
         <footer>

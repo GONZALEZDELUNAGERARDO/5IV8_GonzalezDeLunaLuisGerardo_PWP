@@ -219,3 +219,11 @@ function iniciar(){
 }
 
 iniciar();
+
+
+document.getElementById("btnRevolver").addEventListener("click", function () {
+    const contenedor = document.getElementById("juego");
+    const piezas = Array.from(contenedor.querySelectorAll(".piezas"));
+    const piezasMezcladas = piezas.sort(() => Math.random() - 0.5);
+    piezasMezcladas.forEach(pieza => contenedor.appendChild(pieza));
+});
