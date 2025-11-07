@@ -5,7 +5,6 @@ class StarWarsAPI {
         this.apiBase = 'https://swapi.dev/api/people/';
         this.personajeSeleccionado = null;
         
-        // Verificar que los elementos existan antes de inicializar
         if (this.verificarElementos()) {
             this.inicializarEventos();
             this.cargarPersonajesIniciales();
@@ -101,7 +100,6 @@ class StarWarsAPI {
         const iniciales = this.obtenerIniciales(personaje.name);
         
         if (id) {
-            // Intentamos con imagen real
             card.innerHTML = `
                 <div class="imagen-container">
                     <img src="https://starwars-visualguide.com/assets/img/characters/${id}.jpg" 
@@ -115,7 +113,6 @@ class StarWarsAPI {
                 <p>${personaje.gender} | ${personaje.birth_year}</p>
             `;
         } else {
-            // Usamos directamente el placeholder
             card.innerHTML = `
                 <div class="avatar-placeholder" style="background-color: ${color}">
                     ${iniciales}
@@ -167,13 +164,11 @@ class StarWarsAPI {
         if (seccionDetalles) {
             seccionDetalles.classList.remove('d-none');
             
-            // Scroll suave a la sección de detalles
             seccionDetalles.scrollIntoView({ behavior: 'smooth' });
         }
     }
 
     actualizarVistaDetalles(personaje, id) {
-        // Información básica con verificación
         this.actualizarElemento('personajeName', personaje.name);
         this.actualizarElemento('personajeGender', personaje.gender);
         this.actualizarElemento('personajeBirthYear', personaje.birth_year);
@@ -183,7 +178,6 @@ class StarWarsAPI {
         this.actualizarElemento('personajeEyeColor', personaje.eye_color);
         this.actualizarElemento('personajeSkinColor', personaje.skin_color);
 
-        // Imagen del detalle
         const imgElement = document.getElementById('personajeImagen');
         if (imgElement) {
             if (id) {
@@ -203,7 +197,6 @@ class StarWarsAPI {
                     imgElement.parentNode.appendChild(placeholder);
                 };
             } else {
-                // Si no hay ID, usar placeholder directamente
                 const color = this.generarColorDesdeNombre(personaje.name);
                 const iniciales = this.obtenerIniciales(personaje.name);
                 imgElement.style.display = 'none';
@@ -243,7 +236,6 @@ class StarWarsAPI {
 
     async cargarInformacionAdicional(personaje) {
         try {
-            // Cargar planeta natal
             if (personaje.homeworld && personaje.homeworld !== 'unknown') {
                 const respuestaHomeworld = await fetch(personaje.homeworld);
                 const homeworldData = await respuestaHomeworld.json();
@@ -252,7 +244,6 @@ class StarWarsAPI {
                 this.actualizarElemento('personajeHomeworld', 'Desconocido');
             }
 
-            // Cargar películas
             if (personaje.films && personaje.films.length > 0) {
                 const filmsPromises = personaje.films.slice(0, 5).map(url => fetch(url).then(r => r.json()));
                 const filmsData = await Promise.all(filmsPromises);
@@ -265,7 +256,6 @@ class StarWarsAPI {
                 });
             }
 
-            // Cargar vehículos
             if (personaje.vehicles && personaje.vehicles.length > 0) {
                 const vehiclesPromises = personaje.vehicles.slice(0, 5).map(url => fetch(url).then(r => r.json()));
                 const vehiclesData = await Promise.all(vehiclesPromises);
@@ -346,7 +336,6 @@ class StarWarsAPI {
     }
 }
 
-// Inicializar con manejo de errores
 document.addEventListener('DOMContentLoaded', () => {
     try {
         new StarWarsAPI();

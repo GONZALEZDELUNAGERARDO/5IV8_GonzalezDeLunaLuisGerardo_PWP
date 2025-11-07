@@ -1,6 +1,6 @@
-/* Estilos específicos para Star Wars adaptados a la paleta base */
+
 .personajes-container {
-    background-color: #E0E0E0; /* fondo container como .container */
+    background-color: #E0E0E0; 
     width: 90%;
     min-height: 550px;
     padding: 20px;
@@ -16,8 +16,8 @@
 }
 
 .personaje-card {
-    background-color: #ffffff; /* como inputs y sections */
-    border: 2px solid #ccc; /* como inputs y section */
+    background-color: #ffffff; 
+    border: 2px solid #E0E0E0; 
     border-radius: 10px;
     padding: 10px;
     text-align: center;
@@ -27,7 +27,7 @@
 
 .personaje-card:hover {
     transform: scale(1.05);
-    background-color: #F3E5F5; /* como body */
+    background-color: #F3E5F5; 
 }
 
 .personaje-card img {
@@ -35,7 +35,7 @@
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
-    border: 2px solid #6200EA; /* como h1/h2 y botones */
+    border: 2px solid #6200EA; 
 }
 
 .personaje-card h4 {
@@ -57,9 +57,9 @@
 }
 
 .personaje-stat-table {
-    color: #333333; /* como body text */
+    color: #333333; 
     text-align: center;
-    background-color: #F3E5F5; /* como body */
+    background-color: #F3E5F5; 
     border: none;
     margin: 20px auto;
     width: 90%;
@@ -72,7 +72,7 @@
 }
 
 .personaje-stat-table thead td {
-    background-color: #6200EA; /* como h1/h2 y botones */
+    background-color: #6200EA; 
     color: white;
     font-weight: bold;
     font-size: 18px;
