@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de Star Wars</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/101326ea39.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Personajes de Star Wars</h1>
+    </header>
+
+    <div class="body-container">
+        <section class="half">
+            <div class="d-flex center-flex">
+                <input type="text" id="busqueda" class="lcd-input" placeholder="Buscar personaje por nombre">
+                <button id="buscar" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div id="personajes-container" class="d-flex center-flex personajes-container">
+                <div id="personajes" class="personajes-grid"></div>
+            </div>
+            <div class="d-flex center-flex">
+                <button id="verMas" class="btn"><i class="fa-solid fa-angles-down"></i> Ver Más</button>
+            </div>
+        </section>
+
+        <section id="personajeData" class="half d-none">
+            <h3 id="personajeName" class="center-flex"></h3>
+            <div class="center-flex">
+                <img id="personajeImagen" class="personaje-display" src="" alt="Personaje">
+            </div>
+            <table class="personaje-stat-table">
+                <thead>
+                    <tr>
+                        <td colspan="4">Información del Personaje</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Género</td>
+                        <td id="personajeGender">-</td>
+                        <td>Año Nacimiento</td>
+                        <td id="personajeBirthYear">-</td>
+                    </tr>
+                    <tr>
+                        <td>Altura</td>
+                        <td id="personajeHeight">-</td>
+                        <td>Peso</td>
+                        <td id="personajeMass">-</td>
+                    </tr>
+                    <tr>
+                        <td>Color de pelo</td>
+                        <td id="personajeHairColor">-</td>
+                        <td>Color de ojos</td>
+                        <td id="personajeEyeColor">-</td>
+                    </tr>
+                    <tr>
+                        <td>Color de piel</td>
+                        <td id="personajeSkinColor">-</td>
+                        <td>Planeta</td>
+                        <td id="personajeHomeworld">-</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row center-flex">
+                
+            </div>
+        </section>
+    </div>
+
+    <script src="./JS/fetch2.js"></script>
+    
+<footer>
+<div style="margin-top: 20px;">
+      <a href="../index.html" class="button">Regresar al menú principal</a>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* Estilos específicos para Star Wars adaptados a la paleta base */
+.personajes-container {
+    background-color: #E0E0E0; /* fondo container como .container */
+    width: 90%;
+    min-height: 550px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(85, 85, 85, 0.2);
+}
+
+.personajes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.personaje-card {
+    background-color: #ffffff; /* como inputs y sections */
+    border: 2px solid #ccc; /* como inputs y section */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.personaje-card:hover {
+    transform: scale(1.05);
+    background-color: #F3E5F5; /* como body */
+}
+
+.personaje-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #6200EA; /* como h1/h2 y botones */
+}
+
+.personaje-card h4 {
+    margin: 10px 0 5px 0;
+    color: #6200EA; /* como h1/h2 */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.personaje-display {
+    max-width: 300px;
+    width: 80%;
+    margin: 20px auto;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.personaje-stat-table {
+    color: #333333; /* como body text */
+    text-align: center;
+    background-color: #F3E5F5; /* como body */
+    border: none;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 8px;
+}
+
+.personaje-stat-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.personaje-stat-table thead td {
+    background-color: #6200EA; /* como h1/h2 y botones */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#personajeFilms li::before {
+    content: "🎬 ";
+}
+
+#personajeVehicles li::before {
+    content: "🚀 ";
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.personaje-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.personaje-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.imagen-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+}
+
+.personaje-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.avatar-placeholder-detalle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto 20px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #feda4a;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.mensaje-error {
+    text-align: center;
+    padding: 40px;
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+.d-none {
+    display: none;
+}
+
+a {
+  background-color: #f3f0f9;
+}
