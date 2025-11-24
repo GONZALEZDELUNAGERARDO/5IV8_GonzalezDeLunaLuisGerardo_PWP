@@ -1,0 +1,142 @@
+:root {
+  --bg: #d9d9d9;          
+  --surface: #e6e6e6;     
+  --surface-2: #f2f2f2;   
+  --text: #1a1a1d;        
+  --muted: #5c5c5c;       
+  --primary: #8b5cf6;     
+  --primary-700: #7c3aed; 
+  --danger: #ef4444;      
+  --border: #cfcfcf;      
+  --focus: #c084fc;       
+}
+
+
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg) !important;
+  color: var(--text);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--focus);
+  outline: none;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: var(--primary-700) !important;
+}
+
+.danger {
+  background: var(--danger) !important;
+}
+
+.danger:hover {
+  filter: brightness(0.9);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--surface-2);
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+tr:hover td {
+  background: #e8e8e8;
+}
+
+.alert {
+  padding: 10px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+}
