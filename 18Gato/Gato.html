@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Gato</title>
+  <link rel="stylesheet" href="./css/style.css"> 
+</head>
+<body>
+  <div class="container">
+    <h1>Juego de Gato</h1>
+
+   
+    <div class="topbar">
+      <p id="status">Turno del jugador X</p>
+      <div class="controls">
+        <button onclick="resetGame()">Reiniciar</button>
+      </div>
+    </div>
+
+    
+    <div class="board" id="board"></div>
+
+    
+    <div class="score">
+      <div class="score-card">
+        <span class="score-label">Jugador X</span>
+        <span class="score-value" id="scoreX">0</span>
+      </div>
+      <div class="score-card">
+        <span class="score-label">Jugador O</span>
+        <span class="score-value" id="scoreO">0</span>
+      </div>
+      <div class="score-card">
+        <span class="score-label">Empates</span>
+        <span class="score-value" id="scoreDraw">0</span>
+      </div>
+    </div>
+
+    
+    <h2>Historial de partidas</h2>
+    <table id="history">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Ganador</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

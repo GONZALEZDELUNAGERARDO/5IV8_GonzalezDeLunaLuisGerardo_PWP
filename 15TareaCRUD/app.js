@@ -24,7 +24,7 @@ bd.connect((error) => {
     }
 });
 
-// Middleware
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -32,10 +32,10 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-// Carpeta pública
+
 app.use(express.static(__dirname + '/css'));
 
-//  Ruta para listar registros de bitácora
+
 app.get('/', (req, res) => {
     const query = 'SELECT * FROM bitacora ORDER BY fecha_cambio DESC';
     bd.query(query, (error, resultados) => {
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
     });
 });
 
-//  Ruta para crear un registro
+//  crear un registro
 app.post('/bitacora', (req, res) => {
     const { id_equipo, tipo_fluido, fecha_cambio, cantidad, muestra_analisis, resultados_analisis, proximo_cambio } = req.body;
     const query = `INSERT INTO bitacora 
@@ -56,7 +56,7 @@ app.post('/bitacora', (req, res) => {
     });
 });
 
-//  Ruta para eliminar un registro
+//  eliminar un registro
 app.get('/bitacora/delete/:id', (req, res) => {
     const registroId = req.params.id;
     const query = 'DELETE FROM bitacora WHERE id = ?';
@@ -69,7 +69,7 @@ app.get('/bitacora/delete/:id', (req, res) => {
     });
 });
 
-//  Ruta para editar un registro
+//  editar un registro
 app.get('/bitacora/edit/:id', (req, res) => {
     const registroId = req.params.id;
     const query = 'SELECT * FROM bitacora WHERE id = ?';
@@ -79,7 +79,7 @@ app.get('/bitacora/edit/:id', (req, res) => {
     });
 });
 
-//  Ruta para actualizar un registro
+//   actualizar un registro
 app.post('/bitacora/update/:id', (req, res) => {
     const registroId = req.params.id;
     const { id_equipo, tipo_fluido, fecha_cambio, cantidad, muestra_analisis, resultados_analisis, proximo_cambio } = req.body;
